@@ -1,0 +1,32 @@
+{
+  "family": "RabbitMQGrails3RxMSG",
+  "volumes": [
+    {
+      "name": "my-vol",
+      "host": {}
+    }
+  ],
+  "containerDefinitions": [
+    {
+      "environment": [],
+      "name": "RabbitMQGrails3RxMSG",
+      "image": "1carew1/grails3_rabbitmq_receiver_docker",
+      "cpu": 50,
+      "memory": 500,
+      "portMappings": [
+        {
+          "containerPort": 8081,
+          "hostPort": 8081
+        }
+      ],
+      "mountPoints": [],
+      "entryPoint": [
+        "java",
+        "-Dgrails.env=prod",
+        "-jar",
+        "rabbitMQGrails3Rx-0.1.war"
+      ],
+      "essential": true
+    }
+  ]
+}

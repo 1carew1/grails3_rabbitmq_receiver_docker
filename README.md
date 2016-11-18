@@ -1,0 +1,1 @@
+The purpose of this project is to create a "Receiver" for https://github.com/1carew1/grails3_rabbitmq_docker
